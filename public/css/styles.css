@@ -1,0 +1,160 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    background-color: #57abf2;
+    background-image: -webkit-linear-gradient(-225deg, #19d3d1 5%, #57abf2);
+    background-image: linear-gradient(-45deg,#19d3d1 5%, #57abf2);
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-size: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.gelande-card {
+    background: #fff;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 496px;
+    border: 1px solid lightgray;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.gelande-card aside {
+    position: relative;
+}
+.gelande-card aside img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.gelande-card aside .button {
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 80%;
+    right: 3%;
+    width: 4.0625em;
+    height: 4.0625em;
+    border-radius: 4.0625em;
+    line-height: 4.0625em;
+    text-align: center;
+}
+.gelande-card aside .button .icon {
+    vertical-align: middle;
+}
+.gelande-card article {
+    padding: 1.25em 1.5em;
+}
+.gelande-card article ul {
+    list-style: none;
+    margin: 0.5em 0 0;
+    padding: 0;
+}
+.gelande-card article ul li {
+    display: inline-block;
+    margin-left: 0.5em;
+    line-height: 1em;
+}
+.gelande-card article ul li:first-child {
+    margin-left: 0;
+}
+.gelande-card article ul li .icon {
+    vertical-align: bottom;
+}
+.gelande-card article ul li span:nth-of-type(2) {
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    font-weight: 300;
+    vertical-align: middle;
+    color: #838689;
+}
+.gelande-card article h2, .gelande-card article h3 {
+    margin: 0;
+    font-weight: 300;
+}
+.gelande-card article h2 {
+    font-size: 1.3em;
+    color: #222222;
+}
+.gelande-card article h3 {
+    font-size: 1.1em;
+    color: #838689;
+}
+.gelande-card article p {
+    margin: 1.0em 0;
+    font-size: 0.8125em;
+    font-weight: 400;
+    color: #222222;
+}
+.gelande-card article p span {
+    font-weight: 700;
+    color: #000000;
+}
+.gelande-card article .gelande {
+    text-align: right;
+    margin: 2em 0 0.5em;
+}
+.gelande-card .icon {
+    display: inline;
+    display: inline-block;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/gelande-card-icons.svg);
+    background-repeat: no-repeat;
+}
+.gelande-card .icon-calories, .gelande-card .icon-calories\:regular {
+    background-position: 0 0;
+    width: 16px;
+    height: 19px;
+}
+.gelande-card .icon-clock, .gelande-card .icon-clock\:regular {
+    background-position: 0 -19px;
+    width: 20px;
+    height: 20px;
+}
+.gelande-card .icon-level, .gelande-card .icon-level\:regular {
+    background-position: 0 -39px;
+    width: 16px;
+    height: 19px;
+}
+.gelande-card .icon-play, .gelande-card .icon-play\:regular {
+    background-position: 0 -58px;
+    width: 21px;
+    height: 26px;
+}
+.gelande-card .icon-users, .gelande-card .icon-users\:regular {
+    background-position: 0 -84px;
+    width: 18px;
+    height: 18px;
+}
+
+.i {
+    margin-right:5px;
+    margin-left:5px;
+}
+
+
+.prof-img img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.prof-img .button {
+    background: #fff;
+    display: inline-block;
+    top: 80%;
+    right: 3%;
+    width: 4.0625em;
+    height: 4.0625em;
+    border-radius: 4.0625em;
+    line-height: 4.0625em;
+    text-align: center;
+}
+.prof-img .button .icon {
+    vertical-align: middle;
+}
