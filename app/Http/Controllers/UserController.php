@@ -64,9 +64,9 @@ class UserController extends Controller
             $param['token'] = $token;
             $email_reset = EmailReset::create($param);
 
-            DB::commit();
-
             $email_reset->sendEmailResetNotification($token);
+
+            DB::commit();
 
             return redirect()->route('user.edit')->with('flash_message', '確認メールを送信しました。');
         } catch (\Exception $e) {
@@ -75,13 +75,15 @@ class UserController extends Controller
         }
     }
 
+
     public function sendChangeEmailReset(Request $request, $token)
     {
+        //
         $email_resets = DB::table('email_resets')
             ->where('token', $token)
             ->first();
 
-        if ($email_resets && !$this->tokenExpired($email_resets->created_at)) {
+        if ($email_resets && !$this->tokenExpired($email_resets->created_at)) {//時間以内
 
             $user = User::find($email_resets->user_id);
             $user->email = $email_resets->new_email;
@@ -92,7 +94,7 @@ class UserController extends Controller
                 ->delete();
 
             return redirect()->route('user.edit')->with('flash_message', 'メールアドレスを更新しました');
-        } else {
+        } else {//時間が過ぎていた場合
             // レコードが存在していた場合削除
             if ($email_resets) {
                 DB::table('email_resets')
@@ -108,6 +110,8 @@ class UserController extends Controller
         $expires = 60 * 60;
         return Carbon::parse($createdAt)->addSeconds($expires)->isPast();
     }
+
+
 
 
     public function changePassword(Request $request) {
@@ -129,7 +133,8 @@ class UserController extends Controller
 
         //パスワードを変更
         $user = Auth::user();
-        $user->password = bcrypt($request->get('new-password'));
+    //        $user->password = bcrypt($request->get('new-password'));
+        $user->password = Hash::make($request->get('new-password'));
         $user->save();
 
         return redirect()->route('user.edit')->with('flash_message', 'パスワードを変更しました');

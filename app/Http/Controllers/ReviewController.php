@@ -50,10 +50,10 @@ class ReviewController extends Controller
             }
         }
         if($a !== null) {
-            $query->Where('area_id', '=', $a);
+            $query->where('area_id', '=', $a);
         }
         if($s !== null) {
-            $query->Where('star', '=', $s);
+            $query->where('star', '=', $s);
         }
 
 

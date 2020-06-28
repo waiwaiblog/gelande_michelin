@@ -36,9 +36,11 @@
     Route::group(['prefix' => 'user', 'middleware' => 'auth'], function() {
        Route::get('/edit', 'UserController@edit')->name('user.edit');
        Route::post('/update', 'UserController@update')->name('user.update');
+
        Route::post('/edit', 'UserController@sendChangeEmailLink')->name('user.sendChangeEmailLink');
        Route::get('/reset/{token}', 'UserController@sendChangeEmailReset')->name('user.sendChangeEmailReset');
-       Route::post('/password', 'userController@changePassword')->name('user.changePassword');
+
+       Route::post('/password', 'UserController@changePassword')->name('user.changePassword');
     });
 
 
