@@ -36,7 +36,7 @@ class ReviewController extends Controller
 
         $query->leftJoin('users', 'reviews.user_id', '=', 'users.id');
         $query->leftJoin('areas', 'reviews.area_id', '=', 'areas.id');
-        $query->select('reviews.*', 'users.name', 'users.image', 'areas.area_name');
+        $query->select('reviews.*', 'users.user_name', 'users.image', 'areas.area_name');
         $query->orderBy('created_at', 'desc');
 
         if($g !== null) {

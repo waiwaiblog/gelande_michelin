@@ -27,7 +27,7 @@ class UserController extends Controller
 
         $authUser = Auth::user();
 
-        $authUser->name = $request->input('name');
+        $authUser->user_name = $request->input('user_name');
 
         $uploadFile = $request->file('image');
         if (!empty($uploadFile)) {

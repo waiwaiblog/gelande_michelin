@@ -81,7 +81,7 @@
                                 <li><i class="i fas fa-pen"></i><span>{{ date('Y/n/j', strtotime($review->created_at)) }}</span></li>
                             </ul>
                             <p>{{ $review->comment }}</p>
-                            <p class="gelande">by {{ $review->name }}
+                            <p class="gelande">by {{ $review->user_name }}
                                 @if($review->user_id == $user->id)
                                 <a href="{{ route('review.edit',[ 'id' => $review->id ]) }}"><i class="i fas fa-edit"></i></a></p>
                                 @endif
