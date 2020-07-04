@@ -64,7 +64,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <span class="nav-link2">{{ Auth::user()->name }} さんこんにちは。</span>
+                                <span class="nav-link2">{{ Auth::user()->user_name }} さんこんにちは。</span>
                             </li>
 
                             <li class="nav-item dropdown">

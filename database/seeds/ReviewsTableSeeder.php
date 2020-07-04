@@ -12,6 +12,7 @@ class ReviewsTableSeeder extends Seeder
     public function run()
     {
         DB::table('reviews')->insert([
+            'gelande_name' => 'てすと',
             'title' => 'ドピーカン',
             'star' => 3,
             'comment' => 'とても気持ちいい滑り。',
