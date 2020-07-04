@@ -24,7 +24,7 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:255',
+            'user_name' => 'required|max:255',
             'image' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
